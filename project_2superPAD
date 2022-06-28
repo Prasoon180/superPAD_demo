@@ -1,0 +1,1215 @@
+//SPDX-License-Identifier:UNLICENSE
+pragma solidity >=0.5.0 < 0.9.0;
+contract superPAD_structure {
+mapping(address => uint) public balances;
+
+
+uint public totalSupply = 20000000 * 10 ** 18;          // 200 million SPAD
+uint public initialSupply = 15140000 * 10 ** 18;       // 15.14 million SPAD at TGE            SALE DETAILS
+uint private privateSalePrice = 7000 * 10 ** 18;        // 0.007 million SPAD
+uint IDOprice = 10000 * 10 ** 18;                       // 0.01 million SPAD        1 Ether = 10 ** 18 wei
+
+// initial market cap = 151400 $
+
+string public name = "SUPERPAD";
+string public symbol = "SPAD";
+uint public decimal=18;
+
+uint _private ;       // 5%
+uint _team ;          // 15%
+uint _liquidity ;     // 15%
+uint _market ;        // 10%                  TOKEN DISTRIBUTION VALUE
+uint _reserve ;       // 10%
+uint _public ;        // 25%
+uint _reward ;        // 20%
+
+event Transfer(address indexed from, address indexed to, uint value);
+
+function balanceOf(address owner_of_superPAD) public view returns(uint) {
+    return balance[owner_of_superPAD];
+}
+
+function transfer(address to, uint value) public returns(bool) {
+    require(balanceOf(msg.sender) >= value, "Balance is too Low");
+    balance[to] += value;
+    balance[msg.sender] -= value;
+    emit Transfer(msg.sender,to, value);
+    return true;
+}
+
+function transferFrom(address from, address to, uint value) public returns(bool) {
+    require(balanceOf(from) >= value, "Balance is too low");
+   
+    balance[to] += value;
+    balance[from] -= value;
+    emit Transfer(from, to, value);
+    return true;
+}
+ 
+   uint deploy_time_month = block.timestamp;
+    uint timelock_1_months = deploy_time_month + 2592000;
+     uint timelock_2_months = timelock_1_months + 2592000;
+      uint timelock_3_months = timelock_2_months + 2592000;
+       uint timelock_4_months = timelock_3_months + 2592000;
+        uint timelock_5_months = timelock_4_months + 2592000;
+         uint timelock_6_months = timelock_5_months + 2592000;
+          uint timelock_7_months = timelock_6_months + 2592000;
+           uint timelock_8_months = timelock_7_months + 2592000;
+            uint timelock_9_months = timelock_8_months + 2592000;
+             uint timelock_10_months = timelock_9_months + 2592000;              // timestamp & timelock
+              uint timelock_11_months = timelock_10_months + 2592000;
+               uint timelock_12_months = timelock_11_months + 2592000;
+                uint timelock_13_months = timelock_12_months + 2592000;
+                 uint timelock_14_months = timelock_13_months + 2592000;
+                  uint timelock_15_months = timelock_14_months + 2592000;
+                   uint timelock_16_months = timelock_15_months + 2592000;
+                    uint timelock_17_months = timelock_16_months + 2592000;
+                     uint timelock_18_months = timelock_17_months + 2592000;
+                      uint timelock_19_months = timelock_18_months + 2592000;
+                       uint timelock_20_months = timelock_19_months + 2592000;
+                        uint timelock_21_months = timelock_20_months + 2592000;
+                         uint timelock_22_months = timelock_21_months + 2592000;
+                          uint timelock_23_months = timelock_22_months + 2592000;
+                           uint timelock_24_months = timelock_23_months + 2592000;
+
+    
+modifier month_1(){
+        require(timelock_1_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_2(){
+        require(timelock_2_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_3(){
+        require(timelock_3_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_4(){
+        require(timelock_4_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_5(){
+        require(timelock_5_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_6(){
+        require(timelock_6_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_7(){
+        require(timelock_7_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_8(){
+        require(timelock_8_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_9(){
+        require(timelock_9_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_10(){
+        require(timelock_10_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_11(){
+        require(timelock_11_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_12(){
+        require(timelock_12_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_13(){
+        require(timelock_13_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_14(){
+        require(timelock_14_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_15(){
+        require(timelock_15_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_16(){
+        require(timelock_16_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_17(){
+        require(timelock_17_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_18(){
+        require(timelock_18_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_19(){
+        require(timelock_19_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_20(){
+        require(timelock_20_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_21(){
+        require(timelock_21_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_22(){
+        require(timelock_22_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_23(){
+        require(timelock_23_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+     modifier month_24(){
+        require(timelock_24_months < block.timestamp,"you can't unlock now");
+        _;
+    }
+
+    constructor() {
+    owner_of_super = msg.sender;
+    balances[msg.sender] = initialSupply;
+    }
+
+    
+  modifier onlyOwner{
+      require(owner_of_superPAD == msg.sender ,"you are not owner");
+      _;
+  }
+
+    
+    function token() public view onlyOwner returns(uint) {
+            return  balance[msg.sender];
+
+         function tge() public onlyOwner returns(bool) {
+        _reward = 4000000 *10**18;
+        _market = 1000000 *10**18; 
+        _liquidity = 6000000 *10**18;
+        _private = 250000 *10**18;
+        _public = 3890000 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+
+}
+    
+    function month1() public onlyOwner month_1 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;   
+    }
+
+     function month2() public onlyOwner month_2 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+       balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true
+     }
+
+   function month3() public onlyOwner month_3 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+          balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+   }
+
+        function month4() public onlyOwner month_4 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+        }
+
+        function month5() public onlyOwner month_5 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+         balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+        }
+
+        function month6() public onlyOwner month_6 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+        }
+
+            function month7() public onlyOwner month_7 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+       balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+            }
+
+            function month8() public onlyOwner month_8 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+       balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+        return true;
+            }
+
+function month9() public onlyOwner month_9 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+           balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+
+       return true;
+}
+
+ function month10() public onlyOwner month_10 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+        
+           balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+        return true;
+}
+
+function month11() public onlyOwner month_11 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+        return true;
+       
+}
+
+function month12() public onlyOwner month_12 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _liquidity = 2000000 *10**18;
+
+        
+balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _liquidity;
+        balance[_liquidity] += _liquidity;
+        return true;
+}
+
+ function month13() public onlyOwner month_13 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+
+        return true;
+ }
+        function month14() public onlyOwner month_14 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month15() public onlyOwner month_15 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month16() public onlyOwner month_16 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month17() public onlyOwner month_17 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month18() public onlyOwner month_18 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month19() public onlyOwner month_19 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+        function month20() public onlyOwner month_20 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+        }
+
+         function month21() public onlyOwner month_21 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+         }
+
+ function month22() public onlyOwner month_22 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;        
+ }
+
+         function month23() public onlyOwner month_23 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+         }
+         function month24() public onlyOwner month_24 returns(bool) {
+        _reward = 750000 *10**18;
+        _market = 791666.666 *10**18;
+        _team = 2500000 *10**18;
+        _reserve = 166666.6667 *10**18;
+
+        balance[msg.sender] -= _reward;
+        balance[_reward] += _reward;
+
+        balance[msg.sender] -= _market;
+        balance[_market] += _market;
+
+        balance[msg.sender] -= _team;
+        balance[_team] += _team;
+
+        balance[msg.sender] -= _reserve;
+        balance[_reserve] += _reserve;
+        
+        return true;
+         }
+
+
+    uint deploy_time_week = block.timestamp;
+     uint timelock_1_week = deploy_time_week + 604800;
+      uint timelock_2_week = timelock_1_week + 604800;
+       uint timelock_3_week = timelock_2_week + 604800;
+        uint timelock_4_week = timelock_3_week + 604800;
+         uint timelock_5_week = timelock_4_week + 604800;
+          uint timelock_6_week = timelock_5_week + 604800;
+           uint timelock_7_week = timelock_6_week + 604800;
+            uint timelock_8_week = timelock_7_week + 604800;
+             uint timelock_9_week = timelock_8_week + 604800;
+              uint timelock_10_week = timelock_9_week + 604800;
+               uint timelock_11_week = timelock_10_week + 604800;
+                uint timelock_12_week = timelock_11_week + 604800;
+                 uint timelock_13_week = timelock_12_week + 604800;
+                  uint timelock_14_week = timelock_13_week + 604800;
+                   uint timelock_15_week = timelock_14_week + 604800;
+                    uint timelock_16_week = timelock_15_week + 604800;
+                     uint timelock_17_week = timelock_16_week + 604800;
+                      uint timelock_18_week = timelock_17_week + 604800;
+                       uint timelock_19_week = timelock_18_week + 604800;
+                        uint timelock_20_week = timelock_19_week + 604800;
+                         uint timelock_21_week = timelock_20_week + 604800;
+                          uint timelock_22_week = timelock_21_week + 604800;
+                           uint timelock_23_week = timelock_22_week + 604800;
+                            uint timelock_24_week = timelock_23_week + 604800;
+                             uint timelock_25_week = timelock_24_week + 604800;
+                              uint timelock_26_week = timelock_25_week + 604800;
+                               uint timelock_27_week = timelock_26_week + 604800;
+                                uint timelock_28_week = timelock_27_week + 604800;
+                                 uint timelock_29_week = timelock_28_week + 604800;
+                                  uint timelock_30_week = timelock_29_week + 604800;
+                                   uint timelock_31_week = timelock_30_week + 604800;
+                                    uint timelock_32_week = timelock_31_week + 604800;
+                                     uint timelock_33_week = timelock_32_week + 604800;
+                                      uint timelock_34_week = timelock_33_week + 604800;
+                                       uint timelock_35_week = timelock_34_week + 604800;
+                                        uint timelock_36_week = timelock_35_week + 604800;
+                                         uint timelock_37_week = timelock_36_week + 604800;
+                                          uint timelock_38_week = timelock_37_week + 604800;
+                                           uint timelock_39_week = timelock_38_week + 604800;
+
+
+                                           modifier week_1(){
+    require(timelock_1_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_2(){
+    require(timelock_2_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_3(){
+    require(timelock_3_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_4(){
+    require(timelock_4_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_5(){
+    require(timelock_5_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_6(){
+    require(timelock_6_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_7(){
+    require(timelock_7_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_8(){
+    require(timelock_8_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_9(){
+    require(timelock_9_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_10(){
+    require(timelock_10_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_11(){
+    require(timelock_11_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_12(){
+    require(timelock_12_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_13(){
+    require(timelock_13_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_14(){
+    require(timelock_14_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_15(){
+    require(timelock_15_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_16(){
+    require(timelock_16_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_17(){
+    require(timelock_17_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_18(){
+    require(timelock_18_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_19(){
+    require(timelock_19_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_20(){
+    require(timelock_20_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_21(){
+    require(timelock_21_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_22(){
+    require(timelock_22_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_23(){
+    require(timelock_23_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_24(){
+    require(timelock_24_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_25(){
+    require(timelock_25_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_26(){
+    require(timelock_26_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_27(){
+    require(timelock_27_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_28(){
+    require(timelock_28_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_29(){
+    require(timelock_29_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_30(){
+    require(timelock_30_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_31(){
+    require(timelock_31_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_32(){
+    require(timelock_32_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_33(){
+    require(timelock_33_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_34(){
+    require(timelock_34_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_35(){
+    require(timelock_35_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_36(){
+    require(timelock_36_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_37(){
+    require(timelock_37_week < block.timestamp,"can't unlock now");
+    _;
+}
+modifier week_38(){
+    require(timelock_38_week < block.timestamp,"can't unlock now");
+    _;
+}
+
+  function week1() public onlyOwner  week_1 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+    } 
+
+    
+  function week2() public onlyOwner  week_2 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week3() public onlyOwner  week_3 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week4() public onlyOwner  week_4 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week5() public onlyOwner  week_5 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week6() public onlyOwner  week_6 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week7() public onlyOwner  week_7 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week8() public onlyOwner  week_8 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week9() public onlyOwner  week_9 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week10() public onlyOwner  week_10 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week11() public onlyOwner  week_11 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week12() public onlyOwner  week_12 returns(bool){
+        _private = 263157.8947368421 *10**18;
+        _public = 416666.66666666667 *10**18;
+
+        balance[msg.sender] -= _public;
+        balance[_public] += _public;
+
+        balance[msg.sender] -= _private;
+        balance[_private] += _private; 
+        return true;
+  }
+
+  function week13() public onlyOwner  week_13 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week14() public onlyOwner  week_14 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week15() public onlyOwner  week_15 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week16() public onlyOwner  week_16 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week17() public onlyOwner  week_17 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week18() public onlyOwner  week_18 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week19() public onlyOwner  week_19 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week20() public onlyOwner  week_20 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week21() public onlyOwner  week_21 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week22() public onlyOwner  week_22 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week23() public onlyOwner  week_23 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week24() public onlyOwner  week_24 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week25() public onlyOwner  week_25 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week26() public onlyOwner  week_26 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week27() public onlyOwner  week_27 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week28() public onlyOwner  week_28 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week29() public onlyOwner  week_29 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week30() public onlyOwner  week_30 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week31() public onlyOwner  week_31 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week32() public onlyOwner  week_32 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week33() public onlyOwner  week_33 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week34() public onlyOwner  week_34 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+     function week35() public onlyOwner  week_35 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week36() public onlyOwner  week_36 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week37() public onlyOwner  week_37 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+
+     function week38() public onlyOwner  week_38 returns(bool){
+        _private = 263157.8947368421 *10**18;
+       
+        balance[msg.sender] -= _private;
+        balance[_private] += _private;
+        return true;
+    }
+    }
